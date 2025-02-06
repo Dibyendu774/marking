@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+</head>
+<body>
+    <h1>Enter Some Text</h1>
+    <form action="second.html" method="GET" onsubmit="return submitForm()">
+        <input type="text" name="userInput" id="userInput" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function submitForm() {
+            const userInput = document.getElementById("userInput").value;
+            if (userInput) {
+                
+                window.location.href = `day2.html?inputText=${encodeURIComponent(userInput)}`;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

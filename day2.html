@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+</head>
+<body>
+
+    <p id="displayText"></p>
+
+    <script>
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const inputText = urlParams.get('inputText');
+
+        // Display the input text on the second page
+        if (inputText) {
+            document.getElementById("displayText").textContent = inputText;
+        } else {
+            document.getElementById("displayText").textContent = "No text entered!";
+        }
+    </script>
+</body>
+</html>
